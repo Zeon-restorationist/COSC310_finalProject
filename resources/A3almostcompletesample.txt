@@ -1,0 +1,49 @@
+Hello, my name is Haro your personal entertainment assistant
+Main menu: browse books, browse movies, play trivia, or request an item?
+browse books
+You have selected: browse books, is that right?
+yes
+Neutral
+Searching...
+Would you like to browse something in our 
+Sci-Fi section?
+yes
+Neutral
+That's great!
+Can i suggest 
+Dune? 
+yes
+Neutral
+Added the book: Dune to checkout list
+continue browsing?
+no
+Negative
+Thank you for using this service, would you like to continue browsing or exit?
+continue
+Main menu: browse books, browse movies, play trivia, or request an item?
+browse movies
+You have selected: browse movies, is that right?
+yes
+Neutral
+Searching...
+Would you like to browse something in our 
+Sci-Fi section?
+yes
+Neutral
+That's great!
+Can i suggest 
+Star Wars? 
+yes
+Neutral
+Added the movie: Star Wars to checkout list
+Continue browsing?
+no
+Negative
+Thank you for using this service, would you like to continue browsing or exit?
+exit
+Books borrowed:
+Title: Dune		Genre: Sci-Fi		Author: F. Hebert		Pages: 300
+Movies borrowed:
+Title: Star Wars		Genre: Sci-Fi		Year: 2021		Duration: 2.58
+
+Process finished with exit code 0

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/ChatBotSwing/ChatBotNlp.iml" filepath="$PROJECT_DIR$/ChatBotSwing/ChatBotNlp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Open/Open.iml" filepath="$PROJECT_DIR$/Open/Open.iml" />
+      <module fileurl="file://$PROJECT_DIR$/AIML_Examples/cBOT3.iml" filepath="$PROJECT_DIR$/AIML_Examples/cBOT3.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Server/chatLog.iml" filepath="$PROJECT_DIR$/Server/chatLog.iml" />
+    </modules>
+  </component>
+</project>

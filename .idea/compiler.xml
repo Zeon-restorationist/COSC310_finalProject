@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="chatLog" />
+        <module name="cBOT3" />
+        <module name="ChatBotNlp" />
+        <module name="Open" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="A3_client" target="17" />
+      <module name="cBOT3" target="17" />
+      <module name="ChatBotGUI" target="8" />
+      <module name="ChatBotNlp" target="17" />
+      <module name="ChatGUI" target="1.5" />
+      <module name="chatLog" target="17" />
+      <module name="Open" target="17" />
+      <module name="Stanford" target="14" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="ChatGUI" options="" />
+    </option>
+  </component>
+</project>
