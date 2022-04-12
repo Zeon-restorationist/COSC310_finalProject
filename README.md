@@ -144,7 +144,7 @@ Contributors names and student numbers:
 
 ## New features
 
-* 
+* Added bing translation API
 
 ## Acknowledgments
 
