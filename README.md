@@ -99,6 +99,7 @@ After following the steps in getting started section, there should be a symbol(n
 run java.Main()
 
 ### Executing program
+Use https://github.com/COSC-310-Team-27/Assignment3/tree/main/ChatBotSwing
 
 After dependencies are installed, run GUI.java.
              
