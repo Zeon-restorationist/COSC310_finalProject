@@ -16,6 +16,8 @@ public class GUI<JTimer> implements ActionListener {
     static String request = "request";
     static String objective = "";
     static String sentiment = "Neural";
+    static String english = "english";
+    static String indonesian = "indonesia";
     static String userMsg;
     static String cbMsg;
 
@@ -37,6 +39,7 @@ public class GUI<JTimer> implements ActionListener {
     int BOT = 300;
     int LEFT = 300;
     int RIGHT = 300;
+
     public GUI() {
 
         frame = new JFrame();
@@ -73,26 +76,42 @@ public class GUI<JTimer> implements ActionListener {
 
     }
     static Scanner sc = new Scanner(System.in);
-    public static void main(String[] args) throws InterruptedException {
+    public static void main(String[] args) throws InterruptedException, Exception {
         new GUI();
         Library library = new Library();
         Gallery gallery = new Gallery();
         ChatBot chatBot = new ChatBot();
         Person user1 = new Person();
         getCBM(chatBot.getStatement(0));
+        bingTranslate bingT = new bingTranslate();
+
         boolean outterRun = true;
         boolean innerRun = true;
 
         while(outterRun) {
- 
+
             while(true) {
-                getCBM("Would you like to: browse books, browse movies, play trivia, or request an item?");
+                getCBM("Choose from two languages: English, bahasa Indonesian");
                 getUserIN();
+                userMsg = bingT.translate(userMsg);
                 parse = new ParseNLP(userMsg);
                 ArrayList<String> option = parse.getStringList();
+                if(option.contains(english)){
+                    getCBM("english");
+                }
+                else if(option.contains(indonesian)){
+                    getCBM("indonesian");
+                }
+
+                getCBM("Would you like to: browse books, browse movies, play trivia, or request an item?");
+                getUserIN();
+                userMsg = bingT.translate(userMsg);
+                parse = new ParseNLP(userMsg);
+                option = parse.getStringList();
                 if (option.contains(browseMovies)) {
                     getCBM("You have selected: browse movies, is that right?");
                     getUserIN();
+                    userMsg = bingT.translate(userMsg);
                     boolean yes = chatBot.testReaction(userMsg); //can pass string here instead
                     if (yes) {
                         objective = browseMovies;
@@ -103,6 +122,7 @@ public class GUI<JTimer> implements ActionListener {
                 } else if (option.contains(browseBooks)) {
                     getCBM("You have selected: browse books, is that right?");
                     getUserIN();
+                    userMsg = bingT.translate(userMsg);
                     boolean yes = chatBot.testReaction(userMsg); //can pass string here instead
                     if (yes) {
                         objective = browseBooks;
@@ -114,6 +134,8 @@ public class GUI<JTimer> implements ActionListener {
                 } else if (option.contains(trivia)) {
                     getCBM("You have selected: trivia, is that right?");
                     getUserIN();
+                    userMsg = bingT.translate(userMsg);
+
                     boolean yes = chatBot.testReaction(userMsg); //can pass string here instead
                     if (yes) {
                         objective = trivia;
@@ -124,6 +146,8 @@ public class GUI<JTimer> implements ActionListener {
                 } else if (option.contains(request)) {
                     getCBM("You have selected: request a specific item, is that right?");
                     getUserIN();
+                    userMsg = bingT.translate(userMsg);
+
                     boolean yes = chatBot.testReaction(userMsg); //can pass string here instead
                     if (yes) {
                         objective = request;
@@ -147,6 +171,8 @@ public class GUI<JTimer> implements ActionListener {
                     cbMsg = "What is your favorite genera?";
                     getCBM(cbMsg);
                     getUserIN();
+                    userMsg = bingT.translate(userMsg);
+
                     user1.setFavoriteGenera(userMsg);
                     pca = new PCA(user1.getUserVector());
                     user1.setUserVector();
@@ -158,6 +184,8 @@ public class GUI<JTimer> implements ActionListener {
                     cbMsg = "What is your favorite genera?";
                     getCBM(cbMsg);
                     getUserIN();
+                    userMsg = bingT.translate(userMsg);
+
                     user1.setFavoriteGenera(userMsg);
                     pca = new PCA(user1.getUserVector());
                     user1.setUserVector();
@@ -169,6 +197,8 @@ public class GUI<JTimer> implements ActionListener {
                     cbMsg = "Would you like to request for a book or a movie?";
                     getCBM(cbMsg);
                     getUserIN();
+                    userMsg = bingT.translate(userMsg);
+
                     ParseNLP parseNLP = new ParseNLP(userMsg);
                     ArrayList<String> words = parseNLP.getWords();
                     String search = "";
@@ -177,6 +207,8 @@ public class GUI<JTimer> implements ActionListener {
                             cbMsg = "What is the title of the book?";
                             getCBM(cbMsg);
                             getUserIN();
+                            userMsg = bingT.translate(userMsg);
+
                             for (int i = 0; i < library.getBookList().size(); i++) {
                                 //getCBM("in1");
                                 if(library.getBookList().get(i).getTitle().toLowerCase().contains(userMsg.toLowerCase())){
@@ -199,6 +231,8 @@ public class GUI<JTimer> implements ActionListener {
                             cbMsg = "What is the title of the movie?";
                             getCBM(cbMsg);
                             getUserIN();
+                            userMsg = bingT.translate(userMsg);
+
                             for (int i = 0; i < gallery.getMovieList().size(); i++) {
                                 //getCBM("in2");
                                 if(gallery.getMovieList().get(i).getTitle().toLowerCase().contains(userMsg.toLowerCase())){
@@ -221,6 +255,8 @@ public class GUI<JTimer> implements ActionListener {
                 cbMsg = "Thank you for using this service, would you like to continue browsing?";
                 getCBM(cbMsg);
                 getUserIN();
+                userMsg = bingT.translate(userMsg);
+
                 boolean yes = chatBot.testReaction(userMsg); //can pass string here instead
                 if(yes) {
                     innerRun = true;
