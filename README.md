@@ -1,5 +1,5 @@
-# Assignment3
-Part 2 of chat bot:
+# Personal project
+Final part of chatbot
 
 # [Table of Contents]
 
@@ -10,6 +10,7 @@ Description
 <br />Help
 <br />Authors
 <br />Version History
+<br />New featuers
 <br />Acknowledgments
 
 ## Description
@@ -140,6 +141,10 @@ Contributors names and student numbers:
     * See [commit change]() or See [release history]()
 * 0.1
     * Initial Release
+
+## New features
+
+* 
 
 ## Acknowledgments
 
