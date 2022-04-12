@@ -146,6 +146,7 @@ Contributors names and student numbers:
 ## New features
 
 * Added bing translation API
+    * Bot will translate Indonesian inputs into english strings for processing
 
 ## Acknowledgments
 
