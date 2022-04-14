@@ -48,6 +48,7 @@ public class ChatBot {
 
 	//.next usage noted
 	//PCA loop until user picks a book.
+	//Library loopgeneratitle
 	public void loopGeneraTitle(Person person,PCA pca, ArrayList<String> suggest, boolean last) throws InterruptedException {
 		boolean happy = false;
 		boolean addToCart = false;
@@ -71,7 +72,6 @@ public class ChatBot {
 					GUI.cbMsg = "Can i suggest: "+t+ " ?";
 					GUI.getCBM(GUI.cbMsg);
 					GUI.getUserIN();
-					GUI.getUserIN();
 					reply = GUI.userMsg;
 					addToCart = testReaction(reply);
 					if(addToCart) {
@@ -93,6 +93,7 @@ public class ChatBot {
 			loopNum++;
 		}
 	}
+	//Gallery loopgeneratitle
 	public void loopGeneraTitleMovie(Person person, PCA pca, ArrayList<String> suggest, boolean last) throws InterruptedException {
 
 		Scanner sc = new Scanner(System.in);
@@ -116,7 +117,6 @@ public class ChatBot {
 				for (String m:titles) {
 					GUI.cbMsg = "Can i suggest: "+m+ " ?";
 					GUI.getCBM(GUI.cbMsg);
-					GUI.getUserIN();
 					GUI.getUserIN();
 					reply = GUI.userMsg;
 					addToCart = testReaction(reply);
