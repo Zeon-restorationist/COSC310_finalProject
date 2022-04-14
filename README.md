@@ -10,7 +10,7 @@ Description
 <br />Help
 <br />Authors
 <br />Version History
-<br />New featuers
+<br />New featuers/APIs used
 <br />Acknowledgments
 
 ## Description
