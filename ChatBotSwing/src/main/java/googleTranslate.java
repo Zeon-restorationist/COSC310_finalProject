@@ -7,18 +7,13 @@ import java.net.URLEncoder;
 
 public class googleTranslate {
 
-    public static void main(String[] args) throws IOException {
-        String text = "Hello world!";
-        //Translated text: Hallo Welt!
-        System.out.println("Translated text: " + translate("en", "de", text));
-    }
 
-    private static String translate(String langFrom, String langTo, String text) throws IOException {
+    public static String translate(String input, String output, String text) throws IOException {
         // INSERT YOU URL HERE
         String urlStr = "https://script.google.com/macros/s/AKfycbzkSnt7a0bjTNopV__Cux76FfGWaOL2sF8ZqEkhRu6IETMjUWlHZ-SAC0jaxDuVs6lw/exec" +
                 "?q=" + URLEncoder.encode(text, "UTF-8") +
-                "&target=" + langTo +
-                "&source=" + langFrom;
+                "&target=" + output +
+                "&source=" + input;
         URL url = new URL(urlStr);
         StringBuilder response = new StringBuilder();
         HttpURLConnection con = (HttpURLConnection) url.openConnection();

@@ -43,7 +43,7 @@ public class Trivia {
         Collections.shuffle(TriviaQuestionsSet, new Random());
     }
 
-    public void play() throws InterruptedException {
+    public void play() throws InterruptedException, java.io.IOException {
         int score = 0;
         //Question generation
         for (int question =0; question<5; question++){

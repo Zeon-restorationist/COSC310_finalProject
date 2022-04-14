@@ -49,7 +49,7 @@ public class ChatBot {
 	//.next usage noted
 	//PCA loop until user picks a book.
 	//Library loopgeneratitle
-	public void loopGeneraTitle(Person person,PCA pca, ArrayList<String> suggest, boolean last) throws InterruptedException {
+	public void loopGeneraTitle(Person person,PCA pca, ArrayList<String> suggest, boolean last) throws InterruptedException, java.io.IOException {
 		boolean happy = false;
 		boolean addToCart = false;
 		boolean continueBrowsing = false;
@@ -94,7 +94,7 @@ public class ChatBot {
 		}
 	}
 	//Gallery loopgeneratitle
-	public void loopGeneraTitleMovie(Person person, PCA pca, ArrayList<String> suggest, boolean last) throws InterruptedException {
+	public void loopGeneraTitleMovie(Person person, PCA pca, ArrayList<String> suggest, boolean last) throws InterruptedException, java.io.IOException {
 
 		Scanner sc = new Scanner(System.in);
 		boolean happy = false;
